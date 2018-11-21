@@ -5,6 +5,7 @@ import utils
 
 # Imported Dependencies
 import os
+import shutil
 import time
 
 # Global vairables
@@ -12,6 +13,11 @@ import time
 
 # Initializes the files
 def init():
+    if (os.path.isdir("cache")):
+        shutil.rmtree("cache")
+        os.mkdir("cache")
+    else: 
+        os.mkdir("cache")
     if (os.path.isdir("src")):
         lifespan = 86400
         path = utils.data_files[0][0]

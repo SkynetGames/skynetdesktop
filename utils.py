@@ -16,5 +16,7 @@ usr_data = [ # Local files that contain games, movies, and other software instal
 ]
 
 colors = [ # Color palette of skynet
-    "#b0bec5" # Main light background
+    "#b0bec5", # Light blue
+    "#546e7a", # Middle blue
+    "#263238"  # Dark blue
 ]
