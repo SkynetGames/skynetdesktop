@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Skynet Files
+src/
+
 # Distribution / packaging
 .Python
 build/

@@ -26,8 +26,10 @@ class updating():
     # Method that actually updates the program
     def run(self):
         for i in range(len(utils.data_files)):
-            solditems = requests.get(utils.data_files[i][1])
-            data = solditems.json()
-            with open(utils.data_files[i][0], "w") as f:
-                json.dump(data, f)
-       # gui.close_window()
+            try:
+                soliditems = requests.get(utils.data_files[i][1])
+            finally:    
+                data = soliditems.json()
+                with open(utils.data_files[i][0], "w") as f:
+                    json.dump(data, f)  
+                print(utils.data_files[i][0])       

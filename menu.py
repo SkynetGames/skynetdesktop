@@ -1,15 +1,15 @@
 # Imported Files
 import utils
 import update
+from pprint import pprint
 
 # Imported Dependencies
 
-
-def library(object):
-    update.update
-def games(self):
+def settings(object):
+    pprint(utils.gameData)
+def library(object):    
+    print("library")
+def games(object):
     print("games")
-def software(self):
+def software(object):
     print("software")
-def movies(self):
-    print("movies")  
