@@ -48,7 +48,7 @@ def main():
                 button_startX = (button_width * i)
                 button_endX = (button_width + (button_width * i))
                 button = canvas.create_rectangle(button_startX, 0, button_endX, menu_height, fill=utils.colors[2], activefill=utils.colors[0], tags=utils.buttons[i][0], outline="")
-                text = canvas.create_text((((button_endX - button_startX) / 2) + button_width * i), (menu_height / 2), text=utils.buttons[i][1], font=("Helvetica", 26), fill="white", tags=utils.buttons[i][0])
+                text = canvas.create_text((button_width * (i - 0.5)), (menu_height / 2), text=utils.buttons[i][1], font=("Helvetica", 26), fill="white", tags=utils.buttons[i][0])
                 canvas.tag_bind(utils.buttons[i][0], "<Button-1>", utils.buttons[i][2])
             # Packs canvas for delivery
             canvas.pack(fill=tk.BOTH, expand=True)          
