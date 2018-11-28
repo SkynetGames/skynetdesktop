@@ -6,6 +6,7 @@ import utils
 from tkinter import Tk, Label, Button
 import threading
 import requests
+import urllib.request
 import json
 
 # Starts the GUI and updating
@@ -32,4 +33,10 @@ class updating():
                 data = soliditems.json()
                 with open(utils.data_files[i][0], "w") as f:
                     json.dump(data, f)  
-                print(utils.data_files[i][0])       
+                print(utils.data_files[i][0])      
+        utils.loadJSON()
+        for i in range(len(utils.gameData[0])):
+            url = "https://s3.us-east-2.amazonaws.com/skynet-game-images/" + utils.gameData[0][i]["name"] + ".jpg"
+            target = "src/images/" + utils.gameData[0][i]["name"] + ".jpg"
+            print(url)
+            urllib.request.urlretrieve(url, target)
