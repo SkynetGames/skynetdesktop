@@ -6,9 +6,12 @@ import menu
 import tkinter as tk
 import sys
 
+# Defining root as a global object
+global root
+
 # GUI update window
 def update():
-    class update:
+    class updateGUI:
         # Creates the window
         def __init__(self, master):
             self.master = master
@@ -18,13 +21,13 @@ def update():
             master.resizable(0, 0)
 
     root = tk.Tk()
-    root.iconbitmap("./icons/16x16.ico")
-    update_gui = update(root)
+    #root.iconbitmap("./icons/16x16.ico")
+    update_gui = updateGUI(root)
     root.mainloop()
 
 # Main window
 def main():
-    class main:        
+    class mainGUI:        
         # Creates the window
         def __init__(self, master):
             self.master = master
@@ -38,8 +41,8 @@ def main():
             button_width = (screen_width / 10)
 
          # Creating the background design
-            # Creating a full screen canvas with the correct background and no border   
-            canvas = tk.Canvas(bg=utils.colors[1], highlightthickness=0)
+            # Creating a full screen canvas with the correct background and no border  
+            canvas = main.canvas
             # Creates accent border and separator
             canvas.create_rectangle(0, 0, screen_width, (screen_height / 16.25), fill=utils.colors[0], outline="")
             canvas.create_rectangle(0, 0, screen_width, menu_height, fill=utils.colors[2], outline="")
@@ -48,12 +51,13 @@ def main():
                 button_startX = (button_width * i)
                 button_endX = (button_width + (button_width * i))
                 button = canvas.create_rectangle(button_startX, 0, button_endX, menu_height, fill=utils.colors[2], activefill=utils.colors[0], tags=utils.buttons[i][0], outline="")
-                text = canvas.create_text((button_width * (i - 0.5)), (menu_height / 2), text=utils.buttons[i][1], font=("Helvetica", 26), fill="white", tags=utils.buttons[i][0])
+                text = canvas.create_text((button_width * (i + 0.5)), (menu_height / 2), text=utils.buttons[i][1], font=("Helvetica", 26), fill="white", tags=utils.buttons[i][0])
                 canvas.tag_bind(utils.buttons[i][0], "<Button-1>", utils.buttons[i][2])
             # Packs canvas for delivery
-            canvas.pack(fill=tk.BOTH, expand=True)          
+            canvas.pack(fill=tk.BOTH, expand=True)      
 
     root = tk.Tk()
-    root.wm_iconbitmap(bitmap = "./icons/16x16.ico")
-    main_gui = main(root)
+    main.canvas = tk.Canvas(bg=utils.colors[1], highlightthickness=0)
+    #root.wm_iconbitmap(bitmap = "./icons/16x16.ico")
+    main_gui = mainGUI(root)
     root.mainloop()
