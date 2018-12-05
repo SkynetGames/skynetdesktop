@@ -17,6 +17,7 @@ gameData = []
 software = []
 def loadJSON():
     with open(data_files[0][0]) as g:
+        # Loads the JSON into the array
         gameData.append(json.load(g))
 
     with open(data_files[1][0]) as s:

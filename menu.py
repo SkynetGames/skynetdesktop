@@ -6,6 +6,7 @@ import download
 from pprint import pprint
 import tkinter as tk
 from tkinter import Button
+from PIL import ImageTk, Image
 
 
 # Imports info from GUI
@@ -29,10 +30,10 @@ def games(object):
     canvas = getCanvas("bottom")
     x = 500
     for i in range(len(utils.gameData[0])):
-        y = x * i
-        image = "src/images" + utils.gameData[0][i]["name"] + ".jpg"
-        button = canvas.create_rectangle(y, x, (y - 215), (x + 460), image=image, tag = utils.gameData[0][i]["alt"])
-        canvas.tag_bind(utils.gameData[0][i]["alt"], "<Button-1>")
+        path = "src/images/" + utils.gameData[0][i]["name"] + ".jpg"
+        img = ImageTk.PhotoImage(Image.open(path), tag="bottom")
+        panel = tk.Label(canvas, image = img)
+        panel.pack()
 
 
 # Creates download buttons for software page
