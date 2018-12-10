@@ -10,9 +10,6 @@ import time
 
 # Global vairables
 
-
-# TODO\\ get init() working
-
 # Initializes the files
 def init():
     # Creates, or clears /cache

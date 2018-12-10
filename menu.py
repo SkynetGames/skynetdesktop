@@ -1,12 +1,11 @@
 # Imported Files
 import utils
-import download
+from download import download
 
 # Imported Dependencies
 from pprint import pprint
 import tkinter as tk
 from tkinter import Button
-from PIL import ImageTk, Image
 
 
 # Imports info from GUI
@@ -19,22 +18,25 @@ def getCanvas(target):
 # Opens up settings menu
 def settings(object):
     canvas = getCanvas("bottom")
+    t = utils.userData[0][0]
+    label = canvas.create_text(500, 500, text=t, tag="bottom")
+    label.pack
 
 # Creates launching buttons for downloaded library
 def library(object):    
     canvas = getCanvas("bottom")
-    print("library")
+    t = "You don't have anything downloaded :("
+    label = canvas.create_text(500, 500, text=t, tag="bottom")
+    label.pack
 
 # Creates download buttons for games page
-def games(object):
+def games(object):    
     canvas = getCanvas("bottom")
-    x = 500
+    t = ""
     for i in range(len(utils.gameData[0])):
-        path = "src/images/" + utils.gameData[0][i]["name"] + ".jpg"
-        img = ImageTk.PhotoImage(Image.open(path), tag="bottom")
-        panel = tk.Label(canvas, image = img)
-        panel.pack()
-
+        t = t + utils.gameData[0][i]["alt"] + "\n"
+    label = canvas.create_text(500, 500, text=t, tag="bottom")
+    label.pack
 
 # Creates download buttons for software page
 def software(object):
