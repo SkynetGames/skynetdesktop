@@ -1,5 +1,2 @@
 # skynetdesktop
-The most up to date codebase for Skynet Desktop
-
-Required dependencies
-- Tkinter
+No longer developed, this is only kept around for historic reasons
