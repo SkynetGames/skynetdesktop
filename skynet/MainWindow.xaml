@@ -1,5 +1,6 @@
 ﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="skynet">
-    Hello World!
+        Title="Skynet"
+        WindowState="Maximized"
+        Background="#b0bec5">
 </Window>

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "skynet", "skynet\skynet.csproj", "{4A637C10-E98E-4D50-B73E-10EF8F644E8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "skynet", "skynet\skynet.csproj", "{5BE23FFE-9ABE-49CC-9AA7-2E42E42C4B96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4A637C10-E98E-4D50-B73E-10EF8F644E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4A637C10-E98E-4D50-B73E-10EF8F644E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4A637C10-E98E-4D50-B73E-10EF8F644E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4A637C10-E98E-4D50-B73E-10EF8F644E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BE23FFE-9ABE-49CC-9AA7-2E42E42C4B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BE23FFE-9ABE-49CC-9AA7-2E42E42C4B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BE23FFE-9ABE-49CC-9AA7-2E42E42C4B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BE23FFE-9ABE-49CC-9AA7-2E42E42C4B96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C0F6289A-B59F-430E-A422-22F3061594E9}
+		SolutionGuid = {BB96B070-E811-4210-9C7F-04A16C6535A0}
 	EndGlobalSection
 EndGlobal
