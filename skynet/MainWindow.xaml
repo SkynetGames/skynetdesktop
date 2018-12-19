@@ -1,6 +1,38 @@
-﻿<Window xmlns="https://github.com/avaloniaui"
+﻿<!-- Heading information -->
+<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Skynet"
         WindowState="Maximized"
         Background="#b0bec5">
+  <!-- Style Class for menu buttons -->
+  <Window.Styles>
+    <Style Selector="Button.MenuButton">
+      <Setter Property="Background" Value="#263238" />
+      <Setter Property="FontSize" Value="35"/>
+      <Setter Property="FontFamily" Value="Arial" />
+      <Setter Property="Foreground" Value="White" />
+      <Setter Property="Margin" Value="0,0,15,0"  />
+      <Setter Property="BorderThickness" Value="0" />
+    </Style>
+  </Window.Styles>
+
+  <!-- Top Menu -->
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="2*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <StackPanel Grid.Row="0"
+                  Grid.ColumnSpan="2"
+                  Orientation="Horizontal"
+                  Background="#263238">
+        <Button Classes="MenuButton">Settings</Button>
+        <Button Classes="MenuButton">Library</Button>
+        <Button Classes="MenuButton">Games</Button>
+        <Button Classes="MenuButton">Software</Button>
+      </StackPanel>
+    </Grid>
 </Window>
