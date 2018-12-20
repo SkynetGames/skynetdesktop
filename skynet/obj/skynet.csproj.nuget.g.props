@@ -19,7 +19,6 @@
     <PkgAvalonia Condition=" '$(PkgAvalonia)' == '' ">C:\Users\mwollam\.nuget\packages\avalonia\0.6.1</PkgAvalonia>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0' AND '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Program Files\dotnet\sdk\NuGetFallbackFolder\newtonsoft.json\9.0.1</PkgNewtonsoft_Json>
     <PkgAvalonia Condition=" '$(PkgAvalonia)' == '' ">C:\Users\mwollam\.nuget\packages\avalonia\0.6.1</PkgAvalonia>
   </PropertyGroup>
 </Project>
