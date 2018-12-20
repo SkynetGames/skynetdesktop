@@ -1,17 +1,20 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Diagnostics.ViewModels;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using System;
+using System.Reactive;
 
 namespace skynet
 {
-    public class MainWindow : Window
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-#if DEBUG
+            this.DataContext = new MenuCommands();
             this.AttachDevTools();
-#endif
         }
 
         private void InitializeComponent()

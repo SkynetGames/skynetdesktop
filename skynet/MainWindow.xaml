@@ -1,6 +1,8 @@
-﻿<!-- Heading information -->
-<Window xmlns="https://github.com/avaloniaui"
+﻿<!-- Main Window information -->
+<Window x:Class="skynet.MainWindow"
+        xmlns="https://github.com/avaloniaui"        
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:skynet"
         Title="Skynet"
         WindowState="Maximized"
         Background="#b0bec5">
@@ -29,10 +31,10 @@
                   Grid.ColumnSpan="2"
                   Orientation="Horizontal"
                   Background="#263238">
-        <Button Classes="MenuButton">Settings</Button>
-        <Button Classes="MenuButton">Library</Button>
-        <Button Classes="MenuButton">Games</Button>
-        <Button Classes="MenuButton">Software</Button>
+        <Button Classes="MenuButton" Command="{Binding Settings}">Settings</Button>
+        <Button Classes="MenuButton" Command="{Binding Library}">Library</Button>
+        <Button Classes="MenuButton" Command="{Binding Games}">Games</Button>
+        <Button Classes="MenuButton" Command="{Binding Software}">Software</Button>
       </StackPanel>
     </Grid>
 </Window>
